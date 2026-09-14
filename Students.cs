@@ -1,7 +1,5 @@
-class Student (string Name, string LastName)
+class Student (string Name)
 {
    public string Name = Name;
-   public string LastName = LastName;
    public List<Course> Courses = [];
-  
 }
