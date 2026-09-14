@@ -26,4 +26,25 @@ class Course (string Name, int MaxParticipants)
             }
         }
     }
+    public void removeStudent (Student student)
+    {
+        if(Students.Contains(student))
+        {
+            Students.Remove(student);
+            student.Courses.Remove(this);
+        }
+        else
+        {
+            Console.WriteLine($"{student.Name} går inte den här kursen");
+        }
+    }
+
+    public void printStudents()
+    {
+        Console.WriteLine($"Studenter som går {Name}:");
+        foreach (Student student in Students)
+        {
+            Console.WriteLine(student.Name);
+        }
+    }
 }

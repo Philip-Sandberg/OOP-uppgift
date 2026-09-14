@@ -11,8 +11,11 @@ english.addStudent(martin);
 programming.addStudent(philip);
 programming.addStudent(martin);
 programming.addStudent(emma);
+programming.removeStudent(philip);
+programming.removeStudent(philip);
 programming.addStudent(emma);
 english.addStudent(emma);
+programming.printStudents();
 
 
 Console.WriteLine(english.Name);
