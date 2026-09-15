@@ -1,6 +1,6 @@
 class Course (string Name, int MaxParticipants)
 {
-    public string Name= Name;
+    public string Name = Name;
     public int MaxParticipants= MaxParticipants;
     public List<Student> Students = [];
 
@@ -19,11 +19,9 @@ class Course (string Name, int MaxParticipants)
         }
 
         Students.Add(student);
+        if (!student.Courses.Contains(this))
         {
-            if (!student.Courses.Contains(this))
-            {
-                student.Courses.Add(this);
-            }
+            student.Courses.Add(this);
         }
     }
     public void removeStudent (Student student)

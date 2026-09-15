@@ -5,6 +5,8 @@ Course math = new Course("Matematik", 5);
 Course english = new Course("Engelska", 5);
 Course programming = new Course("Programmering", 2);
 
+
+
 math.addStudent(philip);
 english.addStudent(philip);
 english.addStudent(martin);
