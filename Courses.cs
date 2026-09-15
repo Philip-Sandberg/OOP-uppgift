@@ -39,10 +39,16 @@ class Course (string Name, int MaxParticipants)
 
     public void PrintStudents()
     {
+        if (Students.Count == 0)
+        {
+            Console.WriteLine($"ingen går {Name} just nu");
+        } else
+        {
         Console.WriteLine($"Studenter som går {Name}:");
         foreach (Student student in Students)
         {
             Console.WriteLine(student.Name);
+        }
         }
     }
 }

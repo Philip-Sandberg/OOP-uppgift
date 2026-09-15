@@ -7,6 +7,7 @@ Course programming = new Course("Programmering", 2);
 
 martin.LeaveCourse(english);
 emma.PrintCourses();
+math.PrintStudents();
 programming.RemoveStudent(philip);
 philip.LeaveCourse(math);
 math.AddStudent(philip);

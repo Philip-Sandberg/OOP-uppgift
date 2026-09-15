@@ -11,7 +11,7 @@ class Student (string Name)
    {
       if (!Courses.Contains(course))
       {
-         Console.WriteLine($"{Name} kan inte lämna en kurs de inte går");
+         Console.WriteLine($"{Name} var inte med i den här kursen");
          return;
       }
    course.RemoveStudent(this);
@@ -19,10 +19,16 @@ class Student (string Name)
 
    public void PrintCourses()
    {
+      if (Courses.Count == 0)
+      {
+         Console.WriteLine($"{Name} går inte några kurser");
+      } else
+      {
       Console.WriteLine($"Kurser som {Name} går:");
       foreach (Course course in Courses)
       {
          Console.WriteLine(course.Name);
+      }
       }
    }
 }
