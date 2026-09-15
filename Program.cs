@@ -13,15 +13,18 @@ english.addStudent(martin);
 programming.addStudent(philip);
 programming.addStudent(martin);
 programming.addStudent(emma);
+emma.joinCourse(programming);
 programming.removeStudent(philip);
 programming.removeStudent(philip);
 programming.addStudent(emma);
 english.addStudent(emma);
 programming.printStudents();
+philip.leaveCourse(programming);
+philip.leaveCourse(english);
+philip.printCourses();
 
-
-Console.WriteLine(english.Name);
-Console.WriteLine($"({english.Students.Count}/{english.MaxParticipants})");
+Console.WriteLine("");
+Console.WriteLine($"{english.Name} ({english.Students.Count}/{english.MaxParticipants})");
 
 Console.WriteLine($"{martin.Name} går {martin.Courses.Count} kurser");
 

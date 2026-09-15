@@ -8,7 +8,6 @@ class Student (string Name)
          return;
       }
       course.addStudent(this);
-      Courses.Add(course);
    }
 
 public void leaveCourse(Course course)
@@ -17,7 +16,15 @@ public void leaveCourse(Course course)
    {
       return;
    }
-    Courses.Remove(course);
     course.removeStudent(this);
 }
+
+public void printCourses()
+    {
+        Console.WriteLine($"Kurser som {Name} går:");
+        foreach (Course course in Courses)
+        {
+            Console.WriteLine(course.Name);
+        }
+    }
 }
