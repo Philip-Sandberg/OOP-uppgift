@@ -4,7 +4,7 @@ class Course (string Name, int MaxParticipants)
     public int MaxParticipants= MaxParticipants;
     public List<Student> Students = [];
 
-    public void addStudent (Student student)
+    public void AddStudent (Student student)
     {
         if(Students.Contains(student))
         {
@@ -24,7 +24,7 @@ class Course (string Name, int MaxParticipants)
             student.Courses.Add(this);
         }
     }
-    public void removeStudent (Student student)
+    public void RemoveStudent (Student student)
     {
         if(Students.Contains(student))
         {
@@ -37,7 +37,7 @@ class Course (string Name, int MaxParticipants)
         }
     }
 
-    public void printStudents()
+    public void PrintStudents()
     {
         Console.WriteLine($"Studenter som går {Name}:");
         foreach (Student student in Students)

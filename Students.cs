@@ -2,22 +2,22 @@ class Student (string Name)
 {
    public string Name = Name;
    public List<Course> Courses = [];
-   public void joinCourse(Course course)
+   public void JoinCourse(Course course)
    {
-      course.addStudent(this);
+      course.AddStudent(this);
    }
 
-   public void leaveCourse(Course course)
+   public void LeaveCourse(Course course)
    {
       if (!Courses.Contains(course))
       {
          Console.WriteLine($"{Name} kan inte lämna en kurs de inte går");
          return;
       }
-   course.removeStudent(this);
+   course.RemoveStudent(this);
    }
 
-   public void printCourses()
+   public void PrintCourses()
    {
       Console.WriteLine($"Kurser som {Name} går:");
       foreach (Course course in Courses)
