@@ -6,7 +6,8 @@ Course english = new Course("Engelska", 5);
 Course programming = new Course("Programmering", 2);
 
 
-
+programming.removeStudent(philip);
+philip.leaveCourse(math);
 math.addStudent(philip);
 english.addStudent(philip);
 english.addStudent(martin);
